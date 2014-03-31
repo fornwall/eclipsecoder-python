@@ -27,7 +27,6 @@ public class PyUnitLauncher extends AbstractLauncher {
 
 	@Override
 	protected void setUpConfiguration(ILaunchConfigurationWorkingCopy config) throws Exception {
-		String defaultInterpreter = PydevPlugin.getPythonInterpreterManager().getDefaultInterpreter();
 		String fileLocation = "${workspace_loc:" + unitTestFile.getProject().getName() + "/" + unitTestFile.getName()
 				+ "}";
 		String workingDir = "${workspace_loc:" + unitTestFile.getProject().getName() + "}";
@@ -35,6 +34,6 @@ public class PyUnitLauncher extends AbstractLauncher {
 		config.setAttribute(Constants.ATTR_LOCATION, fileLocation);
 		config.setAttribute(Constants.ATTR_WORKING_DIRECTORY, workingDir);
 		config.setAttribute(Constants.ATTR_PROJECT, unitTestFile.getProject().getName());
-		config.setAttribute(Constants.ATTR_INTERPRETER, defaultInterpreter);
+		config.setAttribute(Constants.ATTR_INTERPRETER, Constants.ATTR_INTERPRETER_DEFAULT);
 	}
 }
