@@ -3,7 +3,6 @@ package net.fornwall.eclipsecoder.pythonsupport;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.python.pydev.debug.core.Constants;
-import org.python.pydev.plugin.PydevPlugin;
 
 import net.fornwall.eclipsecoder.util.AbstractLauncher;
 
